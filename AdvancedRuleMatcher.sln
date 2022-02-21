@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdvancedRuleMatcher.Tests", "AdvancedRuleMatcher.Tests\AdvancedRuleMatcher.Tests.csproj", "{37EE5F2C-3BE5-47A9-A3A1-A7F046326F09}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdvancedRuleMatcher", "AdvancedRuleMatcher\AdvancedRuleMatcher.csproj", "{6DEF6EB6-87F4-4708-9332-69E8AF16C019}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37EE5F2C-3BE5-47A9-A3A1-A7F046326F09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37EE5F2C-3BE5-47A9-A3A1-A7F046326F09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37EE5F2C-3BE5-47A9-A3A1-A7F046326F09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37EE5F2C-3BE5-47A9-A3A1-A7F046326F09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DEF6EB6-87F4-4708-9332-69E8AF16C019}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DEF6EB6-87F4-4708-9332-69E8AF16C019}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DEF6EB6-87F4-4708-9332-69E8AF16C019}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DEF6EB6-87F4-4708-9332-69E8AF16C019}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DEBC760B-6493-4ECA-B43E-7B66F1B84F0A}
+	EndGlobalSection
+EndGlobal
