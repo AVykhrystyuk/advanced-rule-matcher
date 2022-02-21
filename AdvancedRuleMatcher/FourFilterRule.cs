@@ -1,4 +1,4 @@
-﻿namespace AdvancedRuleMatcher.Impl
+﻿namespace AdvancedRuleMatcher
 {
     public record FourFilterRule(
         int RuleId,

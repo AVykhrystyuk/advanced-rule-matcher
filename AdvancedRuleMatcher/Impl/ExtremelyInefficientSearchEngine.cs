@@ -7,12 +7,10 @@ namespace AdvancedRuleMatcher.Impl
     {
         private readonly IReadOnlyList<FourFilterRule> rules;
 
-        public ExtremelyInefficientSearchEngine(IReadOnlyList<FourFilterRule> rules)
-        {
+        public ExtremelyInefficientSearchEngine(IReadOnlyList<FourFilterRule> rules) => 
             this.rules = rules;
-        }
 
-        public BaseRule? MatchRule(RuleMatchCriteria criteria)
+        public FourFilterRule? MatchRule(FourFilterRuleMatchCriteria criteria)
         {
             var any = FourFilterRule.AnyFilter;
 

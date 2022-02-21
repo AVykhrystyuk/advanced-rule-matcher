@@ -8,13 +8,11 @@ namespace AdvancedRuleMatcher.Tests
         private readonly ISearchEngine engine;
 
         public SampleDataIntegrationTests(EngineFixture fixture)
-        {
-            engine = fixture.Engine;
-        }
+            => engine = fixture.Engine;
 
         [Theory]
         [MemberData(nameof(GetTestCases))]
-        public void TestFindRule(RuleMatchCriteria criteria, int expectedRuleId)
+        public void TestFindRule(FourFilterRuleMatchCriteria criteria, int expectedRuleId)
         {
             var rule = engine.MatchRule(criteria);
 
@@ -23,13 +21,13 @@ namespace AdvancedRuleMatcher.Tests
 
         public static IEnumerable<object[]> GetTestCases()
         {
-            static object[] Case(RuleMatchCriteria criteria, int expectedRuleId) => new object[] { criteria, expectedRuleId };
+            static object[] Case(FourFilterRuleMatchCriteria criteria, int expectedRuleId) => new object[] { criteria, expectedRuleId };
 
-            yield return Case(new RuleMatchCriteria("AAA", "BBB", "CCC", "AAA"), expectedRuleId: 4);
-            yield return Case(new RuleMatchCriteria("AAA", "BBB", "CCC", "DDD"), expectedRuleId: 4);
-            yield return Case(new RuleMatchCriteria("AAA", "AAA", "AAA", "AAA"), expectedRuleId: 2);
-            yield return Case(new RuleMatchCriteria("BBB", "BBB", "BBB", "BBB"), expectedRuleId: 6);
-            yield return Case(new RuleMatchCriteria("BBB", "CCC", "CCC", "CCC"), expectedRuleId: 3);
+            yield return Case(new FourFilterRuleMatchCriteria("AAA", "BBB", "CCC", "AAA"), expectedRuleId: 4);
+            yield return Case(new FourFilterRuleMatchCriteria("AAA", "BBB", "CCC", "DDD"), expectedRuleId: 4);
+            yield return Case(new FourFilterRuleMatchCriteria("AAA", "AAA", "AAA", "AAA"), expectedRuleId: 2);
+            yield return Case(new FourFilterRuleMatchCriteria("BBB", "BBB", "BBB", "BBB"), expectedRuleId: 6);
+            yield return Case(new FourFilterRuleMatchCriteria("BBB", "CCC", "CCC", "CCC"), expectedRuleId: 3);
         }
 
         /// <summary>
