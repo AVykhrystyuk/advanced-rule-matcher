@@ -37,7 +37,7 @@ namespace AdvancedRuleMatcher.Tests
         {
             public EngineFixture()
             {
-                Engine = EngineStartup.Start();
+                Engine = SearchEngineFactory.Create();
             }
 
             public ISearchEngine Engine { get; private set; }
