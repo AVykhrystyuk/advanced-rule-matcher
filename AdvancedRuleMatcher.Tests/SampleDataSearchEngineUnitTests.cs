@@ -1,14 +1,15 @@
+using AdvancedRuleMatcher.Impl;
 using AdvancedRuleMatcher.Tests.Common;
 using System.Collections.Generic;
 using Xunit;
 
 namespace AdvancedRuleMatcher.Tests
 {
-    public class SampleDataIntegrationTests : IClassFixture<SampleDataIntegrationTests.EngineFixture>
+    public class SampleDataSearchEngineUnitTests : IClassFixture<SampleDataSearchEngineUnitTests.EngineFixture>
     {
         private readonly ISearchEngine engine;
 
-        public SampleDataIntegrationTests(EngineFixture fixture)
+        public SampleDataSearchEngineUnitTests(EngineFixture fixture)
             => engine = fixture.Engine;
 
         [Theory]
@@ -27,7 +28,7 @@ namespace AdvancedRuleMatcher.Tests
         /// </summary>
         public class EngineFixture
         {
-            public ISearchEngine Engine { get; } = SearchEngineFactory.Create(SampleDataMetadata.DataFile);
+            public ISearchEngine Engine { get; } = SearchEngine.Make(SampleDataMetadata.GetRules());
         }
     }
 }

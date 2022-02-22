@@ -3,11 +3,15 @@ using System.Linq;
 
 namespace AdvancedRuleMatcher.Impl
 {
-    public class ExtremelyInefficientSearchEngine : ISearchEngine
+    /// <summary>
+    /// Extremely inefficient but simple implementation
+    /// </summary>
+    [System.Obsolete("Please use AdvancedRuleMatcher.Impl.FourFilterRuleSearchEngine instead")]
+    public class BruteForceSearchEngine : ISearchEngine
     {
         private readonly IReadOnlyList<FourFilterRule> rules;
 
-        public ExtremelyInefficientSearchEngine(IReadOnlyList<FourFilterRule> rules) => 
+        public BruteForceSearchEngine(IReadOnlyList<FourFilterRule> rules) => 
             this.rules = rules;
 
         public FourFilterRule? MatchRule(FourFilterRuleMatchCriteria criteria)
