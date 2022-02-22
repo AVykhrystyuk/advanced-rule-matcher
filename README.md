@@ -16,7 +16,7 @@ Purpose of the library to find best matching rules for datasets with filtering v
 -  If record matches multiple rules, rule with highest priority must be selected (100 – highest priority, 0 – lowest priority). 
 - Value `<ANY>` means, that any value is accepted for this filter.
 
-Initially rules are stored in [CSV file](/AdvancedRuleMatcher/assets/SampleData.csv).
+Initially rules are stored in [CSV file](/AdvancedRuleMatcher/Assets/SampleData.csv).
 
 In real production environment quantity of rules expected to be 1000+. Quantity of data to pass through filter is 10x-100x larger or might be even infinity data stream in future.
 
@@ -38,8 +38,8 @@ Expected, that this module will be used to find matching rules with the frequenc
 
 
 ### Validation
-In case of provided sample data (see a table in Description or [CSV file](/AdvancedRuleMatcher/assets/SampleData.csv)), expected results will be following:
-| Filter1 | Filter2 | Filter3 | Filter4 | | RuleId |
+In case of provided sample data (see a table in Description or [CSV file](/AdvancedRuleMatcher/Assets/SampleData.csv)), expected results will be following:
+| Value1  | Value2  | Value3  | Value4  | | RuleId |
 |---------|---------|---------|---------|-|--------|
 | AAA     | BBB     | CCC     | AAA     | |  4     |
 | AAA     | BBB     | CCC     | DDD     | |  4     |
