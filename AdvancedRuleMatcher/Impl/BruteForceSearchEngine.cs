@@ -6,7 +6,7 @@ namespace AdvancedRuleMatcher.Impl
     /// <summary>
     /// Extremely inefficient but simple implementation
     /// </summary>
-    [System.Obsolete("Please use AdvancedRuleMatcher.Impl.FourFilterRuleSearchEngine instead")]
+    [System.Obsolete("Please use AdvancedRuleMatcher.Impl.SearchEngine instead")]
     public class BruteForceSearchEngine : ISearchEngine
     {
         private readonly IReadOnlyList<FourFilterRule> rules;
