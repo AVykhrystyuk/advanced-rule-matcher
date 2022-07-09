@@ -51,7 +51,7 @@ namespace AdvancedRuleMatcher.Impl.Generic
 
             var itemsLookup = items.ToLookup(lookup.KeySelector);
             var anyItems = itemsLookup[lookup.AnyKey];
-            var otherItems = itemsLookup.Where(group => group.Key != lookup.AnyKey);
+            var otherItems = itemsLookup.Where(group => !group.Key.Equals(lookup.AnyKey));
 
             foreach (var group in otherItems)
             {
